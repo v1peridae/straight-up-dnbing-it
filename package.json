@@ -1,0 +1,40 @@
+{
+  "name": "dnb-generator",
+  "homepage": "http://aapee.kapsi.fi/dnb-generator",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "mobx": "6",
+    "mobx-react": "7",
+    "ramda": "^0.25.0",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-scripts": "5.0.1"
+  },
+  "resolutions": {
+    "jsx-ast-utils": "3.3.5"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.1.11"
+  }
+}
