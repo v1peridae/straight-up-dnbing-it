@@ -12,7 +12,7 @@ const scan = async () => {
 
             nfc.onreading = (event) => {
                 console.log("nfc tag read");
-                onReading(event);
+                return onReading(event);
             }
         } catch (error) {
             console.error(`oh no! this happened: ${error}`);
@@ -24,8 +24,9 @@ const onReading = ({message, serialNumber}) => {
     for (const record of message.records) {
         switch (record.recordType) {
             case "text":
-                const textDecoder = new TextDecoder(record.encoding);
-                console.log(`message: ${textDecoder.decode(record.data)}`);
+                const decodedMessage = new TextDecoder(record.encoding).decode(record.data);
+                console.log(`message: ${decodedMessage}`);
+                return decodedMessage;
             default:
                 console.error('uh oh, something weird happened reading the tag:');
                 console.log('got the following data.');
