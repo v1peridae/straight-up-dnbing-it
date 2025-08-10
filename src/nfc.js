@@ -1,6 +1,6 @@
 // functions to request, read, and handle data from the yubikey, written by joaquin :)
 
-const scan = async () => {
+export const scan = async () => {
     if ("NDEFReader" in window) {
         try {
             const nfc = new window.NDEFReader();
@@ -20,7 +20,7 @@ const scan = async () => {
     }
 }
 
-const onReading = ({message, serialNumber}) => {
+export const onReading = ({message, serialNumber}) => {
     for (const record of message.records) {
         switch (record.recordType) {
             case "text":

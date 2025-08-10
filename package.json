@@ -1,6 +1,6 @@
 {
   "name": "dnb-generator",
-  "homepage": "http://aapee.kapsi.fi/dnb-generator",
+  "homepage": ".",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
