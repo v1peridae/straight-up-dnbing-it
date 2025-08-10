@@ -1,0 +1,10 @@
+{
+  "files": {
+    "main.js": "/dnb-generator/static/js/main.9d4464d1.js",
+    "index.html": "/dnb-generator/index.html",
+    "main.9d4464d1.js.map": "/dnb-generator/static/js/main.9d4464d1.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.9d4464d1.js"
+  ]
+}
