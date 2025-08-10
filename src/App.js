@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-
+import {scan, onReading} from './nfc'
 class App extends Component {
   state = { seedInput: '' };
 
