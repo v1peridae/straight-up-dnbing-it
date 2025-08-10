@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-
+import {scan, onReading} from './nfc'
 class App extends Component {
   state = { seedInput: '' };
 
@@ -16,8 +16,8 @@ class App extends Component {
             <input
               type="text"
               placeholder="yubi otp code"
-              value={seedInput}
-              onChange={e => this.setState({seedInput: e.target.value})}
+              value={"just scan"}
+              onChange={e => this.setState({seedInput: scan()})}
               style={{minWidth: 260}}
             />
             <button type="button" onClick={() => actions.fromSeed(seedInput)}> get ur music :P</button>
