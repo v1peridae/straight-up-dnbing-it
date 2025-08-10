@@ -27,6 +27,13 @@ const onReading = ({message, serialNumber}) => {
                 const decodedMessage = new TextDecoder(record.encoding).decode(record.data);
                 console.log(`message: ${decodedMessage}`);
                 return decodedMessage;
+                break;
+            case "url":
+                const decodedLink = new TextDecoder(record.encoding).decode(record.data);
+                const otpCode = decodedLink.slice(decodedLink.length - 45);
+                console.log(`raw link: ${decodedLink}`);
+                console.log(`OTP code: ${otpCode}`);
+                return otpCode;
             default:
                 console.error('uh oh, something weird happened reading the tag:');
                 console.log('got the following data.');
