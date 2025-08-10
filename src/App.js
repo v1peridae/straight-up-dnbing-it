@@ -46,9 +46,12 @@ class App extends Component {
     const {actions} = this.props;
     const {seedInput} = this.state;
     return (
-      <div>
+      <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', height: '100vh'}}>
         <main>
-          <div style={{display:'flex', gap: 8, alignItems: 'center', flexWrap: 'wrap'}}>
+          
+          <img src={ "https://signmycode.com/blog/wp-content/uploads/2023/07/yubikey-working-jpg.webp"} alt="yubi" style={{width: 'auto',height: 100, display: 'block', margin: '0 auto', rotate: '-90deg', marginBottom: 50}} />
+            <div style={{display:'flex', gap: 8, alignItems: 'center', flexWrap: 'wrap'}}>
+            
             <input
               type="text"
               placeholder="yubi otp code"
