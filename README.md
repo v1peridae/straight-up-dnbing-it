@@ -2,7 +2,7 @@
 
 - do you like dnb?
 - do you own a yubikey?
-#### try out [yubidnb](https://moonlit-basbousa-1edb06.netlify.app/) :)
+#### try out [yubidnb](https://yubidnb.vercel.app/) :)
 
 what if one of the villagers wants to listen to music and has a yubikey and maybe also wants to be a dj? they can use this!!!! 
 
