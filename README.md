@@ -8,6 +8,7 @@ what if one of the villagers wants to listen to music and has a yubikey and mayb
 
 
 ### how does it work?
+[here's](https://hc-cdn.hel1.your-objectstorage.com/s/v3/76971cd6c7e708c39776dbe1fcc34a8784910fc2_screen_recording_2025-10-02_at_22.13.11.mp4) a video for starters
 
 1. you start here - you generate an otp in the input field.
 
