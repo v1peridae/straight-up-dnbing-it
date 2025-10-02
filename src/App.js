@@ -66,8 +66,8 @@ class App extends Component {
               spellCheck={false}
               inputMode="text"
             />
-            <button type="button" onClick={() => actions.fromSeed(seedInput)}>*</button>
-            <button type="button" onClick={actions.togglePlay}>*</button>
+            <button type="button" onClick={() => actions.fromSeed(seedInput)}>play</button>
+            <button type="button" onClick={actions.togglePlay}>pause</button>
          
           </div>
         </main>

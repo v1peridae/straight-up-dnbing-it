@@ -1,7 +1,8 @@
-import * as R from 'ramda';
 import catalog from './catalog';
 
-const mapIndexed = R.addIndex(R.map);
+const mapIndexed = (fn, arr) => arr.map((item, index) => fn(item, index));
+const reject = (predicate, arr) => arr.filter(item => !predicate(item));
+const propEq = (prop, value) => obj => obj[prop] === value;
 
 const indexToTime = (spec, index) => {
   const oneBeat = 60.0 / spec.bpm;
@@ -14,10 +15,9 @@ const indexToTime = (spec, index) => {
 
 const generateHitMap = sampleName => {
   const spec = catalog[sampleName];
-  return R.pipe(
-    mapIndexed((v, k) => ({index: k, hit: v, time: indexToTime(spec, k)})),
-    R.reject(R.propEq('hit', 0)),
-  )(spec.hits.split(''));
+  const hits = spec.hits.split('');
+  const mappedHits = hits.map((v, k) => ({ index: k, hit: v, time: indexToTime(spec, k)}));
+  return mappedHits.filter(item => item.hit !== '0');
 };
 
 export default generateHitMap;

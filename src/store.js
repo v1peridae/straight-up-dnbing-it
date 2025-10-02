@@ -1,24 +1,10 @@
-import {observable, action} from 'mobx';
-
-const store = observable({
+const store = {
   tempo: null,
   currentIndex: 0,
-  pattern: {
-    drumloop: [],
-    sub: [],
-  }
-});
-
-store.setTempo = action(tempo => {
-  store.tempo = tempo;
-});
-
-store.setCurrentIndex = action(i => {
-  store.currentIndex = i;
-});
-
-store.setPattern = action(pattern => {
-  store.pattern = pattern;
-});
+  pattern: { drumloop: [], sub: [] },
+  setTempo: (tempo) => { store.tempo = tempo; },
+  setCurrentIndex: (i) => { store.currentIndex = i; },
+  setPattern: (pattern) => { store.pattern = pattern; }
+};
 
 export default store;
